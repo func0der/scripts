@@ -170,3 +170,10 @@ Generate an SSH key with a predefined comment and private key file destination.
 We provide these scripts as their are. You are using these scripts on your own risk.
 
 In no event are we liable for any damage caused directly or indirectly by using these scripts.
+
+# Sources and Help
+
+Sources for the certificate scripts
+ * https://thomas-leister.de/internet/eine-eigene-openssl-ca-erstellen-und-zertifikate-ausstellen/
+ * https://www.digitalocean.com/community/tutorials/openssl-essentials-working-with-ssl-certificates-private-keys-and-csrs
+ * https://geekflare.com/openssl-commands-certificates/
