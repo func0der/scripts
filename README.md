@@ -2,6 +2,132 @@
 
 
 ## Utilities
+### createRootCA.sh
+
+#### Description
+
+Generates a private key and a ssl certificate which can be used as a Certification Authority.
+
+
+#### Requirments
+
+openssl needs to be installed.
+
+
+#### Installation
+
+Not required
+
+
+#### Usage
+
+Generates a private key `rootCA.key` and an ssl certificate `rootCA.crt`.
+
+```
+./createRootCA.sh
+```
+
+Generates a private key `PRIVATE_KEY_FILE` and an ssl certificate `rootCA.crt`.
+
+```
+./createRootCA.sh PRIVATE_KEY_FILE
+```
+
+Generates a private key `PRIVATE_KEY_FILE` and an ssl certificate `CERTIFICATE_FILE`.
+
+```
+./createRootCA.sh PRIVATE_KEY_FILE CERTIFICATE_FILE
+```
+
+
+### createSelfSignedCertificate.sh
+
+#### Description
+
+Generates a private key and a ssl certificate which can be used as a domain certificate.
+
+Though it asks for a password, you should leave it empty, because the webserver would need it
+everytime it starts.
+
+This certificate will be signed with itself, therefore there is no Certification Authority 
+certificate needed.
+
+
+#### Requirments
+
+openssl needs to be installed.
+
+
+#### Installation
+
+Not required
+
+
+#### Usage
+
+Generates a private key `domain.key` and an ssl certificate `domain.crt`.
+
+```
+./createSelfSignedCertificate.sh
+```
+
+Generates a private key `PRIVATE_KEY_FILE` and an ssl certificate `domain.crt`.
+
+```
+./createSelfSignedCertificate.sh PRIVATE_KEY_FILE
+```
+
+Generates a private key `PRIVATE_KEY_FILE` and an ssl certificate `CERTIFICATE_FILE`.
+
+```
+./createSelfSignedCertificate.sh PRIVATE_KEY_FILE CERTIFICATE_FILE
+```
+
+
+### createSelfSignedCertificateWithRootCa.sh
+
+#### Description
+
+Generates a private key and a ssl certificate which can be used as a domain certificate.
+
+Though it asks for a password, you should leave it empty, because the webserver would need it
+everytime it starts.
+
+This certificate will be signed with an external Certification Authority. Therefore you need
+it's certification file and private key of it.
+
+
+#### Requirments
+
+openssl needs to be installed.
+
+
+#### Installation
+
+Not required
+
+
+#### Usage
+
+Generates a private key `domain.key` and an ssl certificate `domain.crt`.
+
+```
+./createSelfSignedCertificateWithRootCa.sh ROOT_CA_CERTIFICATE_FILE ROOT_CA_PRIVATE_KEY_FILE
+```
+
+Generates a private key `PRIVATE_KEY_FILE` and an ssl certificate `domain.crt`.
+
+```
+./createSelfSignedCertificateWithRootCa.sh ROOT_CA_CERTIFICATE_FILE ROOT_CA_PRIVATE_KEY_FILE PRIVATE_KEY_FILE
+```
+
+Generates a private key `PRIVATE_KEY_FILE` and an ssl certificate `CERTIFICATE_FILE`.
+
+```
+./createSelfSignedCertificateWithRootCa.sh ROOT_CA_CERTIFICATE_FILE ROOT_CA_PRIVATE_KEY_FILE PRIVATE_KEY_FILE CERTIFICATE_FILE
+```
+
+
 ### generateSSHKey.sh
 
 #### Description
@@ -21,7 +147,7 @@ Not required
 
 #### Usage
 
-Generate an SSH key interactive.
+Generate an SSH key interactively.
 
 ```
 ./generateSSHKey.sh
@@ -38,9 +164,6 @@ Generate an SSH key with a predefined comment and private key file destination.
 ```
 ./generateSSHKey.sh foo@bar.com ~/.ssh/root_server_1
 ```
-
-### addZenDeskSubscriber.php
-
 
 # Disclaimer
 
