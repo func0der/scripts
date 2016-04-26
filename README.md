@@ -9,7 +9,7 @@
 Generates a private key and a ssl certificate which can be used as a Certification Authority.
 
 
-#### Requirments
+#### Requirements
 
 openssl needs to be installed.
 
@@ -53,7 +53,7 @@ This certificate will be signed with itself, therefore there is no Certification
 certificate needed.
 
 
-#### Requirments
+#### Requirements
 
 openssl needs to be installed.
 
@@ -97,7 +97,7 @@ This certificate will be signed with an external Certification Authority. Theref
 it's certification file and private key of it.
 
 
-#### Requirments
+#### Requirements
 
 openssl needs to be installed.
 
@@ -135,7 +135,7 @@ Generates a private key `PRIVATE_KEY_FILE` and an ssl certificate `CERTIFICATE_F
 Generates a 4096 private and public for ssh authorization.
 
 
-#### Requirments
+#### Requirements
 
 ssh-keygen needs to be installed.
 
