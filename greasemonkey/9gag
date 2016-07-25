@@ -1,0 +1,13 @@
+// ==UserScript==
+// @name        9gag
+// @namespace   func0der
+// @include     http://9gag.com/tv/*
+// @version     1
+// @grant       none
+// ==/UserScript==
+
+$('.badge-stage-left').removeClass('col-md-8').addClass('col-md-12');
+var $playlist = $('#jsid-post-playlist');
+$playlist.parent().removeClass('col-md-4').addClass('col-md-12');
+$playlist.remove();
+$('#jsid-post-single-shares-bottom-container').remove();
