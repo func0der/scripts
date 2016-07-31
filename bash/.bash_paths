@@ -1,0 +1,4 @@
+#!/bin/bash
+
+SCRIPTS_BASE_PATH=~/Applications/scripts
+SCRIPTS_GIT_BASE_PATH=$SCRIPTS_BASE_PATH/git
