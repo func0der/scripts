@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Soruce the base path configuration file.
-. .bash_paths
+#. .bash_paths
 
 # Source git-prompt.sh
 . $SCRIPTS_GIT_BASE_PATH/git-prompt.sh
