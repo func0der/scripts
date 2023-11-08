@@ -1,7 +1,10 @@
 #!/bin/bash
 
-# Soruce the base path configuration file.
-#. .bash_paths
+# Source the base path configuration file.
+if [ -z $SCRIPTS_GIT_BASE_PATH ]; then
+	THIS_FILE_DIR=$(dirname $BASH_SOURCE[0])
+	. "${THIS_FILE_DIR}/.bash_paths"
+fi
 
 # Source git-prompt.sh
 . $SCRIPTS_GIT_BASE_PATH/git-prompt.sh
